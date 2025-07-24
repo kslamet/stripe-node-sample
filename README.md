@@ -63,18 +63,20 @@ This is a simple e-commerce application that allows customers to purchase a book
 
 ## Project Structure
 
+```sh
 .
 ├── app.js # Main application file
 ├── public/ # Static assets (CSS, JS, images)
 ├── views/ # Handlebars templates
 ├── sample.env # Example environment variables
 └── README.md
+```
 
 ---
 
-## How to approach adding payments on your e-commerce page?
+## How to approach adding payments on your e-commerce page
 
-- This project is cloned from https://github.com/mattmitchell6/sa-takehome-project-node 
+- This project is cloned from [here](https://github.com/mattmitchell6/sa-takehome-project-node) 
 - The sample code is meant for demonstration purposes and does not include persistent storage.
 - All payment processing is done in Stripe test mode—no real charges will be made.
 - Specific documents that need to be modified are the backend **app.js** file, adding the Payment Element in **checkout.hbs** view, adding payment controls on the frontend **custom.js** file, and showing Payment Intent ID on **success.hbs** view.
