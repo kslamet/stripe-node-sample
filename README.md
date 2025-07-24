@@ -74,35 +74,6 @@ This is a simple e-commerce application that allows customers to purchase a book
 
 ---
 
-## How to approach adding payments on your e-commerce page
-
-- This project is cloned from [here](https://github.com/mattmitchell6/sa-takehome-project-node) 
-- The sample code is meant for demonstration purposes and does not include persistent storage.
-- All payment processing is done in Stripe test mode—no real charges will be made.
-- Specific documents that need to be modified are the backend **app.js** file, adding the Payment Element in **checkout.hbs** view, adding payment controls on the frontend **custom.js** file, and showing Payment Intent ID on **success.hbs** view.
-- To get familiarized with Stripe Payments and Elements, refer to the following documentations:
-    - [Embedded Payments Quickstart](https://docs.stripe.com/payments/quickstart)
-    - [PaymentIntent vs SetupIntent](https://docs.stripe.com/payments/payment-element/design-an-integration)
-    - [Payment Element UI Component](https://docs.stripe.com/payments/payment-element)
-    - [Payment Element Best Practices](https://docs.stripe.com/payments/payment-element/best-practices)
-    - [Payment Intents API Specifications](https://docs.stripe.com/api/payment_intents/create)
-
----
-
-## Challenges you might encounter
-
-- There are multiple approaches to set up payments on Stripe. In this example, we are focusing on using Stripe Payment Elements and PaymentIntent API.
-- For client side, it is helpful to review console logs on your browser (F12) to see specific errors you are facing. Common errors include:
-    - Uncaught promise errors - often due to variables being used outside the scope where it is declared
-    - Page redirect issues - decide whether to use Stripe return_url parameter in confirmParams, vs handling it yourself
-    - Ensure custom.js is included in your layout
-- For server side, it is helpful to review error codes in the terminal. Common errors include:
-    - As Stripe processes currency in cents, it is important to ensure formatting is handled correctly
-    - Refer to best practices when [creating PaymentIntent](https://docs.stripe.com/payments/payment-intents#creating-a-paymentintent)
-- Do look out for exposed API keys in parts of the sample code. It is best to keep them inside your environment variables and make references to the variables.
-
----
-
 ## Additional improvements
 
 - Handle [payment errors](https://docs.stripe.com/payments/payment-element#errors)
