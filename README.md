@@ -16,8 +16,8 @@ This is a simple e-commerce application that allows customers to purchase a book
 
 1. **Clone the repository and install dependencies:**
     ```sh
-    git clone https://github.com/kslamet/sa-takehome-project-node
-    cd sa-takehome-project-node
+    git clone https://github.com/kslamet/stripe-node-sample.git
+    cd stripe-node-sample
     npm install
     ```
 
