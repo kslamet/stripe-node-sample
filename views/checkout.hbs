@@ -9,23 +9,27 @@
       </h5>
       <hr class="mt-40">
       <div class="mt-20 text-info">
-        Total due: $<span class="amount" data-amount="{{amount}}"></span>
+        Total due: $<span class="amount" data-amount="{{amount}}">{{divide amount 100}}</span>
       </div>
     </div>
     <div class="card box-shadow mt-40">
       <div class="card-body">
-        <form name="payment-form">
-          <div>
-            <label for="email">Email address</label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="you@email.com">
-          </div>
-          <div class="mt-20 text-center text-secondary border-placeholder">
-            Add Stripe Element here!
-          </div>
-          <div class="mt-20">
-            <button type="submit" class="btn btn-lg btn-block btn-primary">Pay $<span class="amount" data-amount="{{amount}}"></span></button>
-          </div>
-        </form>
+        <form id="payment-form">
+        <div>
+          <label for="email">Email address</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="you@email.com">
+        </div>
+        <div id="payment-element" class="mt-20"></div>
+        <button id="submit" class="btn btn-primary btn-lg w-100 mt-3">
+          <span id="button-text">Pay</span>
+          <span id="spinner" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+        </button>
+        <div id="payment-message" class="mt-20 text-danger"></div>
+        <input type="hidden" id="item-title" value="{{title}}">
+        <input type="hidden" id="item-amount" value="{{amount}}">
+        <input type="hidden" id="stripe-publishable-key" value="{{stripePublishableKey}}">
+        <input type="hidden" id="payment-intent" value="">
+      </form>
       </div>
     </div>
   </div>

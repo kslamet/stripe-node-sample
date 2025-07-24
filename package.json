@@ -1,11 +1,11 @@
 {
-  "name": "sa-takehome-project-node",
+  "name": "stripe-node-sample",
   "version": "1.0.0",
-  "description": "SA Takehome Project",
+  "description": "Stripe Node Sample",
   "scripts": {
     "start": "node app.js"
   },
-  "author": "Matt Mitchell",
+  "author": "Kristian Slamet",
   "license": "MIT",
   "dependencies": {
     "dotenv": "^10.0.0",

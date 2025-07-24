@@ -1,0 +1,33 @@
+<!-- Add hidden inputs for title and amount inside your form -->
+<input type="hidden" id="item-title" value="{{title}}">
+<input type="hidden" id="item-amount" value="{{amount}}">
+<input type="hidden" id="stripe-publishable-key" value="{{stripePublishableKey}}">
+<div class="row justify-content-md-center">
+  <div class="col-6">
+    <div class="text-center mt-40">
+      <h1>
+        Checkout — Stripe Press
+      </h1>
+      <h5 class="text-secondary">
+        {{title}}
+      </h5>
+      <hr class="mt-40">
+      <div class="mt-20 text-info">
+        Total due: $<span class="amount" data-amount="{{amount}}"></span>
+      </div>
+    </div>
+    <div class="card box-shadow mt-40">
+      <div class="card-body">
+        <form name="payment-form">
+          <div>
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="you@email.com">
+          </div>
+          <div class="mt-20">
+            <button id="checkout-button">Pay with Card</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
